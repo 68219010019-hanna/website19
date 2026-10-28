@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="th" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Portfolio & Tech Summary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'Kanit', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Kanit', 'Inter', sans-serif; }
+        .glass {
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .light .glass {
+            background: rgba(255, 255, 255, 0.75);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 light:bg-slate-100 light:text-slate-800 transition-colors duration-300 min-h-screen flex flex-col justify-between">
+
+    <!-- Compact Desktop Header -->
+    <header class="w-full max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2 text-xl font-bold text-sky-400">
+            <i class="fa-solid fa-terminal"></i>
+            <span>DEV<span class="text-slate-100 light:text-slate-900">.IT</span></span>
+        </div>
+        
+        <nav class="flex items-center gap-6 text-sm font-medium text-slate-300 light:text-slate-600">
+            <a href="#about" class="hover:text-sky-400 transition-colors">โปรไฟล์</a>
+            <a href="#skills" class="hover:text-sky-400 transition-colors">ทักษะ</a>
+            <a href="#knowledge" class="hover:text-sky-400 transition-colors">สรุปความรู้ IT</a>
+            <a href="#contact" class="hover:text-sky-400 transition-colors">ติดต่อ</a>
+        </nav>
+
+        <button id="themeToggle" class="p-2 rounded-lg glass hover:text-amber-400 transition-colors">
+            <i id="themeIcon" class="fa-solid fa-moon"></i>
+        </button>
+    </header>
+
+    <!-- Main Desktop Dashboard Layout (Fit in 1 View) -->
+    <main class="w-full max-w-6xl mx-auto px-6 py-4 grid grid-cols-12 gap-5 flex-1">
+        
+        <!-- Left Column: Profile Card & Quick Info (4 cols) -->
+        <div class="col-span-12 lg:col-span-4 flex flex-col gap-5">
+            <!-- Profile Box -->
+            <div id="about" class="glass rounded-2xl p-6 flex flex-col items-center text-center">
+                <img src="รูป2.jpg" alt="Profile" class="w-28 h-28 rounded-full border-2 border-sky-400/50 mb-4 object-cover">
+                <h1 class="text-2xl font-bold tracking-tight">อลิชา  ใจหวัง</h1>
+                <p class="text-xs text-sky-400 font-medium mb-3">IT Specialist & Web Developer</p>
+                <p class="text-xs text-slate-400 light:text-slate-600 leading-relaxed mb-4">
+                    มุ่งมั่นพัฒนาระบบเว็บ คลาวด์ และดูแลความปลอดภัยไซเบอร์ สนใจเทคโนโลยีสมัยใหม่และการประยุกต์ใช้งานจริง
+                </p>
+                
+                <div class="flex gap-2 w-full">
+                    <a href="#contact" class="flex-1 py-2 rounded-xl bg-sky-500 hover:bg-sky-600 text-white text-xs font-medium text-center transition-all">
+                        <i class="fa-solid fa-paper-plane mr-1"></i> ติดต่อ
+                    </a>
+                    <a href="#knowledge" class="flex-1 py-2 rounded-xl glass hover:bg-slate-800/50 text-xs font-medium text-center transition-all">
+                        <i class="fa-solid fa-book-open mr-1"></i> ความรู้ IT
+                    </a>
+                </div>
+            </div>
+
+            <!-- Skills Box -->
+            <div id="skills" class="glass rounded-2xl p-5 flex-1">
+                <h2 class="text-sm font-bold text-sky-400 mb-3 flex items-center gap-2">
+                    <i class="fa-solid fa-code text-xs"></i> ทักษะทางเทคนิค (Skills)
+                </h2>
+                
+                <div class="space-y-2.5 text-xs">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Frontend (HTML/CSS/JS/Tailwind)</span>
+                            <span class="text-sky-400">90%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 light:bg-slate-200 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-sky-400 h-1.5 rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Backend & Scripting (Python, Node.js)</span>
+                            <span class="text-sky-400">80%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 light:bg-slate-200 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-sky-400 h-1.5 rounded-full" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span>Cloud & Network (AWS, Linux, Security)</span>
+                            <span class="text-sky-400">75%</span>
+                        </div>
+                        <div class="w-full bg-slate-800 light:bg-slate-200 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-sky-400 h-1.5 rounded-full" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tags -->
+                <div class="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-slate-700/30 text-[11px]">
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 light:bg-slate-200">Git/GitHub</span>
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 light:bg-slate-200">Docker</span>
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 light:bg-slate-200">Linux CLI</span>
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 light:bg-slate-200">SQL</span>
+                    <span class="px-2 py-0.5 rounded-md bg-slate-800/80 light:bg-slate-200">REST API</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: IT Knowledge Hub (8 cols) -->
+        <div id="knowledge" class="col-span-12 lg:col-span-8 flex flex-col gap-5">
+            <div class="glass rounded-2xl p-6 flex-1 flex flex-col">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-100 light:text-slate-900">สรุปความรู้ IT สม่ำเสมอ (Tech Knowledge Summary)</h2>
+                        <p class="text-xs text-slate-400 light:text-slate-600">รวบรวมหลักการสำคัญด้านเทคโนโลยีสารสนเทศ</p>
+                    </div>
+                    <span class="px-2.5 py-1 rounded-full text-[10px] bg-purple-500/10 text-purple-400 border border-purple-500/20">IT Essentials</span>
+                </div>
+
+                <!-- 4 Compact Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 flex-1">
+                    
+                    <!-- Card 1 -->
+                    <div class="p-4 rounded-xl glass hover:border-sky-400/40 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fa-solid fa-globe text-sky-400"></i>
+                                <h3 class="text-sm font-semibold">Web Infrastructure</h3>
+                            </div>
+                            <p class="text-xs text-slate-400 light:text-slate-600 leading-relaxed">
+                                เรียนรู้การทำงานของ DNS, HTTP/HTTPS Protocol, SSL Certificates และการสื่อสารระหว่าง Frontend กับ Backend ผ่าน REST APIs
+                            </p>
+                        </div>
+                        <span class="text-[10px] text-sky-400 font-mono mt-2">#WebDev #Network</span>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="p-4 rounded-xl glass hover:border-purple-400/40 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fa-solid fa-shield-halved text-purple-400"></i>
+                                <h3 class="text-sm font-semibold">Cybersecurity Basics</h3>
+                            </div>
+                            <p class="text-xs text-slate-400 light:text-slate-600 leading-relaxed">
+                                หลักความปลอดภัย CIA Triad (Confidentiality, Integrity, Availability), การเปิดใช้ 2FA และการป้องกันภัยคุกคาม เช่น Phishing & Malware
+                            </p>
+                        </div>
+                        <span class="text-[10px] text-purple-400 font-mono mt-2">#Security #InfoSec</span>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="p-4 rounded-xl glass hover:border-emerald-400/40 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fa-solid fa-cloud text-emerald-400"></i>
+                                <h3 class="text-sm font-semibold">Cloud Computing</h3>
+                            </div>
+                            <p class="text-xs text-slate-400 light:text-slate-600 leading-relaxed">
+                                ทำความเข้าใจบริการ Cloud (IaaS, PaaS, SaaS) การปรับขยายระบบ (Auto Scaling) และการจัดการ Container ด้วย Docker
+                            </p>
+                        </div>
+                        <span class="text-[10px] text-emerald-400 font-mono mt-2">#AWS #DevOps</span>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="p-4 rounded-xl glass hover:border-amber-400/40 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fa-solid fa-database text-amber-400"></i>
+                                <h3 class="text-sm font-semibold">Database & Data</h3>
+                            </div>
+                            <p class="text-xs text-slate-400 light:text-slate-600 leading-relaxed">
+                                ความแตกต่างระหว่าง SQL (Relational DB) เช่น MySQL/PostgreSQL กับ NoSQL (Document DB) เช่น MongoDB เพื่อเลือกใช้ให้เหมาะกับงาน
+                            </p>
+                        </div>
+                        <span class="text-[10px] text-amber-400 font-mono mt-2">#Database #Data</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Compact Contact Footer Strip -->
+            <div id="contact" class="glass rounded-2xl p-4 flex flex-wrap items-center justify-between gap-3 text-xs">
+                <div class="flex items-center gap-4">
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-envelope text-sky-400"></i> 68219010019@kbtc.ac.th</span>
+                    <span class="flex items-center gap-1.5"><i class="fa-solid fa-phone text-emerald-400"></i> 062-xxx-xxxx</span>
+                </div>
+                <div class="flex gap-2">
+                    <a href="#" class="w-8 h-8 rounded-lg glass flex items-center justify-center hover:text-sky-400 transition-colors"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-lg glass flex items-center justify-center hover:text-sky-400 transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Desktop Minimal Footer -->
+    <footer class="w-full text-center py-3 text-[11px] text-slate-400 light:text-slate-600">
+        © 2026 Somchai DevIT Portfolio | Single-Screen Desktop Layout
+    </footer>
+
+    <!-- Minimal Script for Theme Toggle -->
+    <script>
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+        const htmlElement = document.documentElement;
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                htmlElement.classList.add('light');
+                themeIcon.className = 'fa-solid fa-sun';
+            } else {
+                htmlElement.classList.remove('light');
+                htmlElement.classList.add('dark');
+                themeIcon.className = 'fa-solid fa-moon';
+            }
+        });
+    </script>
+</body>
+</html>
